@@ -8,8 +8,8 @@ config();
 const port = process.env.PORT || 3000;
 
 const app = express();
-app.use(routes);
 app.use(express.json());
+app.use(routes);
 
 app.post("/2tds1", (req, res) => {
   return res.status(333).send({ message: "Hello, 2TDS1 - só os dev!" });
