@@ -1,13 +1,13 @@
-import { Router } from "express"
+import { Router } from "express";
 
-import docesRoutes from "./doces.routes.js"
+import docesRoutes from "./doces.routes.js";
 
-const routes = Router()
+const routes = Router();
 
 routes.get("/", (req, res) => {
-    return res.status(200).send({ message: "yeah!"})
-})
+  return res.status(200).send({ message: "yeah!" });
+});
 
-routes.use("/doces", docesRoutes)
+routes.use("/doces", docesRoutes);
 
 export default routes;

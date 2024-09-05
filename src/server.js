@@ -1,21 +1,20 @@
-import express from "express"
-import { config } from "dotenv"
+import express from "express";
+import { config } from "dotenv";
 
-import routes from "./routes/index.routes.js"
+import routes from "./routes/index.routes.js";
 
-config()
+config();
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3000;
 
-const app = express()
-app.use(routes)
-app.use(express.json())
-
+const app = express();
+app.use(routes);
+app.use(express.json());
 
 app.post("/2tds1", (req, res) => {
-    return res.status(333).send({ message: "Hello, 2TDS1 - só os dev!"})
-})
+  return res.status(333).send({ message: "Hello, 2TDS1 - só os dev!" });
+});
 
 app.listen(port, () => {
-    console.log(`🤠 Server started on http://localhost:${port}`)
-})
+  console.log(`🤠 Server started on http://localhost:${port}`);
+});
